@@ -1,5 +1,5 @@
 # Shelly Pro 4PM
-Basic LVGL UI for Shelly Pro 4PM flashed with Tasmota written in Berry
+Basic LVGL UI for Shelly Pro 4PM flashed with Tasmota
 <div>
 <img src="shelly.png" width="200">
 </div>
