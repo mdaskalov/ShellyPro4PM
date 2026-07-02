@@ -12,7 +12,7 @@ class ShellyPro4PM
     haspmota.start(tasmota.wd + 'shelly-pro-4pm.jsonl')
 
     haspmota.parse('{"id":1,"obj":"flex","flex_flow":1,"pad_row":1,"flex_main_place":2}')
-    haspmota.parse('{"id":2,"parentid":1,"obj":"flex","h":18,"flex_flow":0,"flex_track_place":2,"pad_column":2,"text_color":"#ffffff","bg_color":"#0000FF","bg_opa":255}')
+    haspmota.parse('{"id":2,"parentid":1,"obj":"flex","h":18,"flex_flow":0,"flex_track_place":2,"pad_column":2,"text_color":"#ffffff","bg_color":"#1fa3ec","bg_opa":255}')
     haspmota.parse(f'{{"id":3,"parentid":2,"obj":"label","text":"{deviceName}","flex_grow":1,"long_mode":4}}')
     haspmota.parse('{"id":4,"parentid":2,"obj":"label","text":"--"}')
     haspmota.parse('{"id":5,"parentid":2,"obj":"label","text":":"}')
@@ -28,7 +28,7 @@ class ShellyPro4PM
       var relayState = tasmota.get_power(relay)
       haspmota.parse(f'{{"id":{line},"parentid":1,"obj":"flex","flex_grow":1,"flex_flow":0,"flex_track_place":2,"pad_right":1,"text_color":"#000000","bg_color":"#FFFFFF","bg_opa":255}}')
       haspmota.parse(f'{{"id":{line+1},"parentid":{line},"obj":"label","text":"{relayName}","flex_grow":1,"long_mode":4}}')
-      haspmota.parse(f'{{"id":{line+2},"parentid":{line},"obj":"switch","h":16,"w":30,"toggle":{relayState}}')
+      haspmota.parse(f'{{"id":{line+2},"parentid":{line},"obj":"switch","h":16,"w":30,"toggle":{relayState},"bg_color11":"#1fa3ec"}}')
       tasmota.add_rule(f'hasp#p1b{line+2}#event=changed', / event -> self.update_relay(relay))
       tasmota.add_rule(f'POWER{relay+1}#state', / value -> self.update_switch(relay, value))
     end
