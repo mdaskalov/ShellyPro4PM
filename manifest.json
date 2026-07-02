@@ -1,0 +1,8 @@
+{
+  "name": "ShellyPro4PM",
+  "version": "0x01000000",
+  "description": "Shelly Pro 4PM control",
+  "author": "Milko Daskalov",
+  "min_tasmota": "0x0F010002",
+  "features": "display"
+}
